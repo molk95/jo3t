@@ -11,7 +11,7 @@ export default function App() {
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.searchBar}>
-          <Text>Search</Text>
+          <Text style={{color:'#fff'}}>Search</Text>
         </View>
         <View style={styles.list}>
           <Text style={{color:'#fff'}}>List</Text>

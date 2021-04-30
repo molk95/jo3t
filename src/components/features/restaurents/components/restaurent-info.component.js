@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
+import { Avatar, Button, Card, Title, Paragraph } from "react-native-paper";
 
 export const restaurentInfo = ({ restaurent = {} }) => {
   const {
@@ -13,5 +14,22 @@ export const restaurentInfo = ({ restaurent = {} }) => {
     rating = 3,
     isClosedTemporarily,
   } = restaurent;
-  return <Text>{name}</Text>;
+  return (
+    <Card>
+      <Card.Title
+        title="Card Title"
+        subtitle="Card Subtitle"
+        left={LeftContent}
+      />
+      <Card.Content>
+        <Title>{name}</Title>
+        <Paragraph>{photos}</Paragraph>
+      </Card.Content>
+      <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+      <Card.Actions>
+        <Button>Cancel</Button>
+        <Button>Ok</Button>
+      </Card.Actions>
+    </Card>
+  );
 };

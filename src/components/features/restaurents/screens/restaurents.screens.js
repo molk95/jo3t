@@ -16,7 +16,7 @@ const SearchContainer = styled.View`
 const RestaurantListContainer = styled.View`
   flex: 1;
   ${(props) => props.theme.spacing.space[3]};
-  ${(props) => props.theme.colors.ui.inverse};
+  ${(props) => props.theme.colors.bg.primary};
 `;
 
 export const RestaurantsScreen = () => (

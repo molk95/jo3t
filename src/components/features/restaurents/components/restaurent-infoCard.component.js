@@ -3,11 +3,11 @@ import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 
 const RestaurantCard = styled(Card)`
-  ${(props) => props.theme.colors.ui.inverse};
+  ${(props) => props.theme.colors.bg.primary};
 `;
 const RestaurantCardCover = styled(Card.Cover)`
   ${(props) => props.theme.spacing.space[3]};
-  ${(props) => props.theme.colors.ui.inverse};
+  ${(props) => props.theme.colors.bg.primary};
 `;
 
 const Title = styled.Text`

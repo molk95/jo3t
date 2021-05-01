@@ -6,17 +6,17 @@ import { RestaurantInfoCard } from "../components/restaurent-infoCard.component"
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  ${(props) => props.theme.spacing.space[3]};
 `;
 
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16;
-  background-color: "blue";
+  ${(props) => props.theme.spacing.space[3]};
+  ${(props) => props.theme.colors.ui.inverse};
 `;
 
 export const RestaurantsScreen = () => (

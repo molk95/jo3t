@@ -3,16 +3,23 @@ import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 
 const RestaurantCard = styled(Card)`
-  ${(props) => props.theme.colors.bg.primary};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 const RestaurantCardCover = styled(Card.Cover)`
   ${(props) => props.theme.spacing.space[3]};
-  ${(props) => props.theme.colors.bg.primary};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
 const Title = styled.Text`
+  color: ${(props) => props.theme.colors.ui.primary};
+  font-familty: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.sizes.body};
+`;
+const Info = styled.Text`
   ${(props) => props.theme.spacing.space[3]};
-  ${(props) => props.theme.colors.ui.primary};
+`;
+const Address = styled.Text`
+  ${(props) => props.theme.spacing.space[3]};
 `;
 
 export const restaurentInfoCard = ({ restaurent = {} }) => {
@@ -30,7 +37,10 @@ export const restaurentInfoCard = ({ restaurent = {} }) => {
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
-      <Title>{name}</Title>
+      <Info>
+        <Title>{name}</Title>
+        <Address>{name}</Address>
+      </Info>
     </RestaurantCard>
   );
 };

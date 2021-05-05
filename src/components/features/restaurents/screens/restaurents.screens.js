@@ -10,13 +10,13 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchContainer = styled.View`
-  ${(props) => props.theme.spacing.space[3]};
+  padding: ${(props) => props.theme.spacing.space[3]};
 `;
 
 const RestaurantListContainer = styled.View`
   flex: 1;
-  ${(props) => props.theme.spacing.space[3]};
-  ${(props) => props.theme.colors.bg.primary};
+  padding: ${(props) => props.theme.spacing.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
 export const RestaurantsScreen = () => (
